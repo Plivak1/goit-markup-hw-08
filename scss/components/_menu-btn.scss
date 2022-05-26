@@ -1,0 +1,29 @@
+.menu-btn {
+  position: relative;
+  margin-left: auto;
+  display: block;
+  cursor: pointer;
+  border: 0;
+  fill: var(--dominant_color);
+  background-color: var(--white_color);
+  z-index: 99;
+  &:hover,
+  &:focus {
+    fill: var(--hover_style);
+  }
+  &__icon-open {
+    opacity: 1;
+  }
+  &__icon-close {
+    opacity: 0;
+  }
+  @include tablet {
+    display: none;
+  }
+}
+.menu-btn.is-active .menu-btn__icon-open {
+  opacity: 0;
+}
+.menu-btn.is-active .menu-btn__icon-close {
+  opacity: 1;
+}

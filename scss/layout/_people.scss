@@ -1,0 +1,112 @@
+.people {
+  background-color: var(--button_background);
+  &-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.1785;
+    letter-spacing: 0.03em;
+    color: var(--color_without_guidance);
+    @include desktop {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 1.16;
+    }
+  }
+}
+
+.command {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -30px;
+  }
+
+  @include desktop {
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+
+  &__people {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: calc(100% / 2 - 30px);
+      margin-left: 30px;
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include desktop {
+      width: 270px;
+      height: 428px;
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+
+    margin-bottom: 30px;
+    list-style: none;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--white_color);
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.team-wrapper {
+  text-align: center;
+  padding: 30px 0;
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--dominant_color);
+    margin-bottom: 10px;
+  }
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--connection);
+    margin-bottom: 16px;
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: var(--white_color);
+    border-radius: 50%;
+    transition: background-color var(--transition);
+    &:hover,
+    &:focus {
+      background-color: var(--hover_style);
+      &:hover .socials__icon,
+      &:focus .socials__icon {
+        fill: var(--white_color);
+      }
+    }
+  }
+  &__icon {
+    fill: #afb1b8;
+    transition: fill var(--transition);
+  }
+}
